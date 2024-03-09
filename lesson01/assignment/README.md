@@ -5,3 +5,5 @@
 * Use ES6+ array and object methods to manipulate the data input, and ouput the result with an explanation.
 * Use at least 1 ES6+ method for each form, with total of at least 4 unique methods used.
 * There is example code in this assignment directory.
+
+* Accidentally committed changes on master as opposed to assignment branch. Editting README so I can create pull request.
