@@ -1,8 +1,9 @@
-@import "/css/settings.variables";
-@import "/css/settings/responsive";
+@import "settings.variables";
+@import "settings.responsive";
 
 .profile-card {
   display: flex;
+  max-width: 700px;
   background-color: $card-bg-color;
   border-radius: $card-border-radius;
   box-shadow: $card-box-shadow;
@@ -34,7 +35,6 @@
 
     .details {
       .detail {
-        @include flexbox();
         margin-bottom: $spacing-small;
 
         .label {
@@ -48,16 +48,10 @@
       }
     }
   }
+}
 
-  @include responsive(mobile) {
+@media screen and (max-width: 768px) {
+  .profile-card {
     flex-direction: column;
-
-    .profile-image {
-      flex: 0 0 $image-width-mobile;
-    }
-
-    .profile-info {
-      padding: $card-padding-mobile;
-    }
   }
 }
