@@ -1,17 +1,63 @@
-html {
-    box-sizing: border-box;
-}
+@import "/css/settings.variables";
+@import "/css/settings/responsive";
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
-}
+.profile-card {
+  display: flex;
+  background-color: $card-bg-color;
+  border-radius: $card-border-radius;
+  box-shadow: $card-box-shadow;
+  overflow: hidden;
 
-.main {
-    padding: 2rem;
-}
+  .profile-image {
+    flex: 0 0 $image-width;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-h1 {
-    color: $red;
+  .profile-info {
+    flex: 1;
+    padding: $card-padding;
+
+    .name {
+      color: $secondary-color;
+      margin-bottom: $spacing-small;
+    }
+
+    .title {
+      color: $primary-color;
+      font-weight: bold;
+      margin-bottom: $spacing-medium;
+    }
+
+    .details {
+      .detail {
+        @include flexbox();
+        margin-bottom: $spacing-small;
+
+        .label {
+          font-weight: bold;
+          margin-right: $spacing-small;
+        }
+
+        .value {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    flex-direction: column;
+
+    .profile-image {
+      flex: 0 0 $image-width-mobile;
+    }
+
+    .profile-info {
+      padding: $card-padding-mobile;
+    }
+  }
 }
