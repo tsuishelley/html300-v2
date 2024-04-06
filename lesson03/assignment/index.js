@@ -27,12 +27,12 @@ fetch('./data/data.json')
     </div>
     <div class="right-content">
       <ul>
-        <li class="employee-company">Company: ${employee.company}</li>
-        <li class="employee-experience">Experience: ${employee.experience}</li>
-        <li class="employee-school">School: ${employee.school}</li>
-        <li class="employee-major">Major: ${employee.major}</li>
-        <li class="employee-company">Company: ${employee.company}</li>
-        <li class="employee-linkedin"><img src="/img/linkedin.svg"> ${employee.linkedInUrl}</li>
+        <li class="employee-company"><span style="font-weight: bold">Company:&nbsp</span> ${employee.company}</li>
+        <li class="employee-experience"><span style="font-weight: bold">Experience:&nbsp</span> ${employee.experience}</li>
+        <li class="employee-school"><span style="font-weight: bold">School:&nbsp</span> ${employee.school}</li>
+        <li class="employee-major"><span style="font-weight: bold">Major:&nbsp</span> ${employee.major}</li>
+        <li class="employee-company"><span style="font-weight: bold">Email:&nbsp</span> ${employee.email}</li>
+        <li class="employee-linkedin"><img src="/img/linkedin.svg">&nbsp${employee.linkedInUrl}</li>
         <li class="employee-code-languages">${employee.codeLanguages}</li>
         </ul>
         </div>

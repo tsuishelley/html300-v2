@@ -13,6 +13,9 @@
   box-shadow: $card-box-shadow;
 
 .employee-info {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
     padding-left:$spacing-medium;
     max-width: 300px;
     padding-right:$spacing-medium;
@@ -56,6 +59,8 @@
           color: $primary-color;
           list-style-type: none;
           padding-top:$spacing-medium;
+          display:flex;
+          align-items: center;
     }
 }
 
