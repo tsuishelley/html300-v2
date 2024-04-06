@@ -5,36 +5,38 @@
 //Styling for the profile card
 .profile-card {
   display: flex;
-  max-width: 700px;
+  flex-wrap:wrap;
+  margin-bottom:100px;
+  padding:$card-padding;
   background-color: $card-bg-color;
   border-radius: $card-border-radius;
   box-shadow: $card-box-shadow;
-  overflow: hidden;
+
+.employee-info {
+    padding-left:$spacing-medium;
+    max-width: 300px;
+}
 
   //Styling for the profile image
   .profile-image {
-    flex: 0 0 $image-width;
-    img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-    }
+      border-radius: 50%;
+      width:100%;
+      padding-bottom:$spacing-small;
   }
 
   //Styling for the profile information
-  .profile-info {
-    flex: 1;
-    padding: $card-padding;
-
     .employee-name {
-      color: $secondary-color;
+      color: $primary-color;
       margin-bottom: $spacing-small;
+      font-size: 30px;
+      font-weight: bold;
     }
 
     .employee-job-title {
       color: $primary-color;
-      font-weight: bold;
       margin-bottom: $spacing-medium;
+      font-style: italic;
     }
 
     //Styling for the details page
@@ -44,13 +46,14 @@
     .employee-major,
     .employee-linkedin,
     .employee-code-languages {
-        margin-bottom: $spacing-small;
-          font-weight: bold;
+        width:400px;
           margin-right: $spacing-small;
-
-
+          color: $primary-color;
+          list-style-type: none;
+          padding: $spacing-small;
+          background-color: #F6F5F6;
     }
-  }
+
 }
 
 // Mobile responsiveness

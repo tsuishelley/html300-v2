@@ -2,34 +2,39 @@
 fetch('./data/data.json')
   .then(response => response.json())
   .then(employees => {
-    const container = document.querySelector('#list-container');
+    const container = document.querySelector('.profile-card');
 
     // Loop through all elements of the list
     employees.forEach(function (employee, index) {
 
         let image = document.createElement('img');
-        image.src = '/img/headshot.jpg'; // Replace 'path/to/employee-image.jpg' with the actual path to your image
+        image.src = '/img/headshot.jpg';
         image.alt = 'Employee Image';
-  
-        // Append image to container
-        container.appendChild(image);
+
         
       // Build HTML 
-      let list = document.createElement('ul');
+      let list = document.createElement('div');
 
+    
       // Assign unique class names to each list
-      list.classList.add(`employee-${index + 1}`); // Adding 1 to index for 1-based indexing
+      list.classList.add(`employee-${index + 1}`, 'profile-card'); // Adding 1 to index for 1-based indexing
 
-      list.innerHTML = `
-        <li class="employee-name">Name: ${employee.name}</li>
-        <li class="employee-job-title">Job Title: ${employee.jobTitle}</li>
+      list.innerHTML += `
+      <div class="employee-info">
+      <img src="${image.src}" alt="${image.alt}" class="profile-image">
+      <div class="employee-name">${employee.name}</div>
+      <div class="employee-job-title">${employee.jobTitle}</div>
+    </div>
+      <ul>
+
         <li class="employee-company">Company: ${employee.company}</li>
         <li class="employee-experience">Experience: ${employee.experience}</li>
         <li class="employee-school">School: ${employee.school}</li>
         <li class="employee-major">Major: ${employee.major}</li>
         <li class="employee-company">Company: ${employee.company}</li>
-        <li class="employee-linkedin">LinkedIn URL: ${employee.linkedInUrl}</li>
+        <li class="employee-linkedin"><img src="/img/linkedin.svg"> ${employee.linkedInUrl}</li>
         <li class="employee-code-languages">Code Languages: ${employee.codeLanguages}</li>
+        </ul>
       `;
       // Insert HTML into page
       container.append(list);
