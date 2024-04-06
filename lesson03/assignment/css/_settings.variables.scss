@@ -1,12 +1,16 @@
-// Colors
-$gray: #f6f5f6;
-$white: #ffffff;
-$black: #000000;
-$green: #7acb00;
-$pink: #ff0097;
-$red: #F1352B;
-$orange: #ff6600;
-$yellow: #ffb617;
-$robins: #01c1d6;
-$purple: #6e27c5;
-$blue: #150f96;
+// Color variables
+$primary-color: #007bff;
+$secondary-color: #495057;
+
+// Spacing variables
+$spacing-small: 8px;
+$spacing-medium: 16px;
+
+// Card variables
+$card-bg-color: #f8f9fa;
+$card-border-radius: 8px;
+$card-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$image-width: 200px;
+$image-width-mobile: 150px;
+$card-padding: 24px;
+$card-padding-mobile: 16px;

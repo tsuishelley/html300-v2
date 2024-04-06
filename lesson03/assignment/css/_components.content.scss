@@ -1,17 +1,61 @@
-html {
-    box-sizing: border-box;
+//Importing Variables
+@import "settings.variables";
+@import "settings.responsive";
+
+//Styling for the profile card
+.profile-card {
+  display: flex;
+  max-width: 700px;
+  background-color: $card-bg-color;
+  border-radius: $card-border-radius;
+  box-shadow: $card-box-shadow;
+  overflow: hidden;
+
+  //Styling for the profile image
+  .profile-image {
+    flex: 0 0 $image-width;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  //Styling for the profile information
+  .profile-info {
+    flex: 1;
+    padding: $card-padding;
+
+    .employee-name {
+      color: $secondary-color;
+      margin-bottom: $spacing-small;
+    }
+
+    .employee-job-title {
+      color: $primary-color;
+      font-weight: bold;
+      margin-bottom: $spacing-medium;
+    }
+
+    //Styling for the details page
+    .employee-company,
+    .employee-experience,
+    .employee-school,
+    .employee-major,
+    .employee-linkedin,
+    .employee-code-languages {
+        margin-bottom: $spacing-small;
+          font-weight: bold;
+          margin-right: $spacing-small;
+
+
+    }
+  }
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
-}
-
-.main {
-    padding: 2rem;
-}
-
-h1 {
-    color: $red;  
+// Mobile responsiveness
+@media screen and (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+  }
 }
