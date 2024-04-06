@@ -25,16 +25,17 @@ fetch('./data/data.json')
       <div class="employee-name">${employee.name}</div>
       <div class="employee-job-title">${employee.jobTitle}</div>
     </div>
+    <div class="right-content">
       <ul>
-
         <li class="employee-company">Company: ${employee.company}</li>
         <li class="employee-experience">Experience: ${employee.experience}</li>
         <li class="employee-school">School: ${employee.school}</li>
         <li class="employee-major">Major: ${employee.major}</li>
         <li class="employee-company">Company: ${employee.company}</li>
         <li class="employee-linkedin"><img src="/img/linkedin.svg"> ${employee.linkedInUrl}</li>
-        <li class="employee-code-languages">Code Languages: ${employee.codeLanguages}</li>
+        <li class="employee-code-languages">${employee.codeLanguages}</li>
         </ul>
+        </div>
       `;
       // Insert HTML into page
       container.append(list);

@@ -15,13 +15,14 @@
 .employee-info {
     padding-left:$spacing-medium;
     max-width: 300px;
+    padding-right:$spacing-medium;
 }
 
   //Styling for the profile image
   .profile-image {
       object-fit: cover;
       border-radius: 50%;
-      width:100%;
+      width:70%;
       padding-bottom:$spacing-small;
   }
 
@@ -39,6 +40,12 @@
       font-style: italic;
     }
 
+    .right-content {
+        background-color: #F6F5F6;
+        width:400px;
+        margin-left: $spacing-medium;
+        align-content: center;
+    };
     //Styling for the details page
     .employee-company,
     .employee-experience,
@@ -46,14 +53,10 @@
     .employee-major,
     .employee-linkedin,
     .employee-code-languages {
-        width:400px;
-          margin-right: $spacing-small;
           color: $primary-color;
           list-style-type: none;
-          padding: $spacing-small;
-          background-color: #F6F5F6;
+          padding-top:$spacing-medium;
     }
-
 }
 
 // Mobile responsiveness
