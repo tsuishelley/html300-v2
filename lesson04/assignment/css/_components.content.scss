@@ -1,0 +1,120 @@
+//Importing Variables
+@import "settings.variables";
+
+body {
+    margin: $padding $margin 0 $margin;
+    background-image: url("/img/background-overlay.svg");
+    background-color: $background-color;
+    background-size: cover;
+}
+
+.container {
+    display:flex;
+    flex-direction:column;
+    color: $primary-color;
+}
+
+.time-label,
+.season-label ,
+.hemisphere-label
+{
+    @include small-chip;
+}
+
+.time-label {
+    background-color: $time-color;
+}
+
+.season-label {
+    background-color: $season-color;
+}
+
+.hemisphere-label {
+    background-color: $hemisphere-color;
+}
+
+.time p,
+.season p,
+.hemisphere p {
+    @include large-chip;
+}
+
+.time,
+.season,
+.hemisphere {
+    margin-right: 30px;
+}
+
+.user-info {
+    display:flex;
+    flex-direction:row;
+}
+
+.header {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:last baseline;
+}
+
+.main {
+    margin: $card-top 0 0 0;
+    padding: $padding;
+    background-color:$card-color;
+    border-radius: 30px;
+}
+
+.main h1 {
+    font-family: Poppins;
+    font-size: $page-title;
+    height: $page-title;
+    line-height: 100%;
+    margin: 0 0 0 0;
+}
+
+.main p {
+    font-family: Roboto;
+    line-height: $body-line;
+    opacity: 75%;
+}
+
+.sidebar {
+    display:flex;
+}
+
+.checklist,
+.about {
+@include tabs;
+}
+
+.checklist:hover,
+.about:hover {
+    animation: wiggle 1.5s linear infinite;
+    background-color: $card-color;
+    color:$primary-color;
+  }
+
+/* Keyframes */
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }

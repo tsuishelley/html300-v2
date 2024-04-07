@@ -1,0 +1,55 @@
+// Color variables
+$primary-color: #725C4E;
+$secondary-color: #8A7B66;
+$background-color:#EEE9CA;
+$card-color: white;
+$time-color:#ECDF52;
+$season-color: #82D5BB;
+$hemisphere-color: #F7CD67;
+
+
+$margin: 300px;
+$padding: 70px;
+$card-top: 40px;
+$chip-padding:10px;
+$large-chip-padding: 20px;
+
+$radius: 40px;
+
+$body-line: 150%;
+
+$page-title: 48px;
+$label: 14px;
+$chip-text: 18px;
+
+
+@mixin small-chip {
+    display: inline-block;
+    padding: $chip-padding;
+    border-radius: $radius;
+    height: auto;
+    font-family: Roboto;
+    font-size: $label;
+    transform: rotate(-10deg);
+  }
+
+  @mixin large-chip {
+    margin:-10px 0 0 0;
+    padding: $large-chip-padding 40px $large-chip-padding 40px;
+    background-color: $card-color;
+    border-radius:$radius;
+    font-family: Roboto;
+    font-size: $chip-text;
+    font-weight: 500;
+  }
+
+  @mixin tabs {
+    margin-left:30px;
+    padding: $large-chip-padding 40px $large-chip-padding 40px;
+    background-color: $secondary-color;
+    color: $card-color;
+    border-radius:50px;
+    font-family: Roboto;
+    font-size: $chip-text;
+    font-weight: 500;
+  }
