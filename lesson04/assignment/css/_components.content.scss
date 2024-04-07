@@ -1,6 +1,7 @@
 //Importing Variables
 @import "settings.variables";
 
+//Styling for page body
 body {
     margin: $padding $margin 0 $margin;
     background-image: url("/img/background-overlay.svg");
@@ -8,12 +9,14 @@ body {
     background-size: cover;
 }
 
+//Styling for the container within
 .container {
     display:flex;
     flex-direction:column;
     color: $primary-color;
 }
 
+//Styling of small chips
 .time-label,
 .season-label ,
 .hemisphere-label
@@ -21,35 +24,43 @@ body {
     @include small-chip;
 }
 
+//Time label coloring
 .time-label {
     background-color: $time-color;
 }
 
+//Season label coloring
 .season-label {
     background-color: $season-color;
 }
 
+
+//Hemisphere label coloring
 .hemisphere-label {
     background-color: $hemisphere-color;
 }
 
+//Time, season, hemisphere styling
 .time p,
 .season p,
 .hemisphere p {
     @include large-chip;
 }
 
+//Time, season, hemisphere padding
 .time,
 .season,
 .hemisphere {
     margin-right: 30px;
 }
 
+//User info alignment
 .user-info {
     display:flex;
     flex-direction:row;
 }
 
+//Header alignment
 .header {
     display:flex;
     flex-direction:row;
@@ -57,6 +68,7 @@ body {
     align-items:last baseline;
 }
 
+//Main card
 .main {
     margin: $card-top 0 0 0;
     padding: $padding;
@@ -64,6 +76,7 @@ body {
     border-radius: 30px;
 }
 
+//Title styling
 .main h1 {
     font-family: Poppins;
     font-size: $page-title;
@@ -72,21 +85,25 @@ body {
     margin: 0 0 0 0;
 }
 
+//Card body styling
 .main p {
     font-family: Roboto;
     line-height: $body-line;
     opacity: 75%;
 }
 
+//Right pane nav bar
 .sidebar {
     display:flex;
 }
 
+//Right pane nav tabs
 .checklist,
 .about {
 @include tabs;
 }
 
+//Hover state for wiggle
 .checklist:hover,
 .about:hover {
     animation: wiggle 1.5s linear infinite;
@@ -94,6 +111,8 @@ body {
     color:$primary-color;
   }
 
+
+ //Wiggle animation
 /* Keyframes */
 @keyframes wiggle {
     0%, 7% {

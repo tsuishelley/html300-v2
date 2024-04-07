@@ -7,22 +7,25 @@ $time-color:#ECDF52;
 $season-color: #82D5BB;
 $hemisphere-color: #F7CD67;
 
-
+//Margin and padding variables
 $margin: 300px;
 $padding: 70px;
 $card-top: 40px;
 $chip-padding:10px;
 $large-chip-padding: 20px;
 
+//Radius 
 $radius: 40px;
 
+//Line height
 $body-line: 150%;
 
+//Type sizes
 $page-title: 48px;
 $label: 14px;
 $chip-text: 18px;
 
-
+//Chips mixins
 @mixin small-chip {
     display: inline-block;
     padding: $chip-padding;
