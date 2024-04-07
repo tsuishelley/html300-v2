@@ -8,6 +8,63 @@ html {
     box-sizing: inherit;
 }
 
+/* Main Styles */
 .main {
-    padding: 2rem;
-}
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100vh;
+  }
+  
+  /* Header Styles */
+  .header {
+    grid-column: 1 / -1;
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+    /* Nav Styles */
+  .nav {
+    grid-column: 1 / span 3;
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    display:flex;
+    justify-content:space-evenly;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    background-color: orange;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    grid-column: 1 / -1;
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
