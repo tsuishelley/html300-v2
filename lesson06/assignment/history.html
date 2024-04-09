@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Assignment 06 - Bootstrap 4</title>
+    <style>
+        .image-gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .image-gallery img {
+          margin: 10px;
+          max-width: 20%;
+          object-fit: cover;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("[rel='tooltip']").tooltip();
+        });
+    </script>
+</head>
+<body>
+    <!-- Nav bar for the site -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <a class="navbar-brand" href="/index.html">My Pets</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/history.html">Pet Bios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gallery.html">Gallery </a>
+          </li> 
+        </ul>
+      </nav>
+    <main class="main">
+        <h1 class="display-1 m-5 text-center">The Stories of Our Pets</h1>
+        <div class="container">
+            <div class="row">
+              <!-- Small size column -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="#" rel="tooltip" title="5 year old Siberian cat">Totoro</a>
+                    <p class="card-text">Totoro was meant to be my graduation gift, but we ended up getting him early. He is an extremely cuddly, soft, and social cat who loves to meow and shout for what he wants. He's not afraid of anything, not even the dogs.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Medium size column -->
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="#" rel="tooltip" title="2 year old ACD mix">Yuna</a>
+                    <p class="card-text">Mei's old foster parent reached out to us. They knew we had a front right leg tripawd (three-legged dog) and figured we would want another. Yuna is dumb, brave, and incredibly hungry for love and words of affirmation. If you're offering pets she's there.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Large size column -->
+              <div class="col-sm-12 col-md-12 col-lg-3">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="#" rel="tooltip" title="3 year old Border Collie mix">Mei</a>
+                    <p class="card-text">Mei was also meant to be my graduation gift, we also ended up getting her early. We actually didn't know she was a three-legged dog until we met her — the most important thing to us at the time was that she was medium-sized and liked cats. She still does.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+</body>
+</html>
