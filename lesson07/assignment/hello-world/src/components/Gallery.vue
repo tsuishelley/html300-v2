@@ -22,13 +22,13 @@ export default {
   data() {
     return {
       images: [
-        { src: "assets/img/yuna.jpeg" },
-        { src: "/img/mei-beach.JPG" },
-        { src: "/img/mei-yuna-yard.JPG" },
-        { src: "/img/mei-yuna-boat.JPG" },
-        { src: "/img/totoro-blanket.JPG" },
-        { src: "/img/totoro-laptop.JPG" },
-        { src: "/img/totoro-shelf.JPG" }
+        { src: require("../assets/img/yuna.jpeg") },
+        { src: require("../assets/img/mei-beach.jpeg") },
+        { src: require("../assets/img/mei-yuna-yard.jpeg") },
+        { src: require("../assets/img/mei-yuna-boat.jpeg") },
+        { src: require("../assets/img/totoro-blanket.jpeg") },
+        { src: require("../assets/img/totoro-laptop.jpeg") },
+        { src: require("../assets/img/totoro-shelf.jpeg") }
       ]
     };
   }
