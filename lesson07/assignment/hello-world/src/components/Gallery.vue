@@ -1,24 +1,25 @@
 <template>
+  <div>
     <NavBar />
-
-  <main class="main">
-    <h1 class="display-1 m-5 text-center">A mix of stupid and cute photos.</h1>
-    <div class="container">
-      <div class="image-gallery">
-        <img v-for="(image, index) in images" :key="index" :src="image.src" :alt="'Image ' + (index + 1)">
+    <main class="main">
+      <h1 class="display-1 m-5 text-center">A mix of stupid and cute photos.</h1>
+      <div class="container">
+        <ImagePic :images="images" />
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </template>
 
 <script>
 import NavBar from './NavBar.vue'; // Importing the NavBar component
+import ImagePic from './ImagePic.vue'; // Importing the Image component
 
 export default {
-      name: 'ImageGallery',
-    components: {
-        NavBar
- },
+  name: 'ImageGallery',
+  components: {
+    NavBar,
+    ImagePic
+  },
   data() {
     return {
       images: [
@@ -37,13 +38,4 @@ export default {
 
 <style>
 /* Add your styles for the image gallery here */
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.image-gallery img {
-  width: 300px;
-  margin: 10px;
-}
 </style>
